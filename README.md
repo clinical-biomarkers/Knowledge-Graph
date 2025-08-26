@@ -39,5 +39,9 @@ The BiomarkerKB KG is constructed by ingesting biomarker data into the CFDE Know
 - Building the KG requires significant disk space:  
   > **Free disk space equal to 3–4× the size of the ontology CSVs is recommended.**
 
-- Repository copies and scripts are stored here:  
+- Repository copies and scripts are stored here:
+  ```
+  /data/shared/repos/ubkg-neo4j
+  ```
+- Supplementary files are available in the [biomarker-partnership repo](https://github.com/clinical-biomarkers/biomarker-partnership/tree/main/supplementary_files).
 
