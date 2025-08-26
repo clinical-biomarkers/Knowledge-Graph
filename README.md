@@ -32,4 +32,12 @@ The BiomarkerKB KG is constructed by ingesting biomarker data into the CFDE Know
      [UBKG Build Instructions](https://github.com/x-atlas-consortia/ubkg-neo4j/blob/main/docs/BUILD_INSTRUCTIONS.md).  
 
 3. **Data Updates**
-   - Each time new biomarker data is pushed, the edge list and node files must be **recreated and re-ingested** into the CFDE KG.  
+   - Each time new biomarker data is pushed, the edge list and node files must be **recreated and re-ingested** into the CFDE KG.
+  
+## Notes & Requirements  
+
+- Building the KG requires significant disk space:  
+  > **Free disk space equal to 3–4× the size of the ontology CSVs is recommended.**
+
+- Repository copies and scripts are stored here:  
+
