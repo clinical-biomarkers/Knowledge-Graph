@@ -3,7 +3,7 @@
 ### Background
 
 ### KG Setup
-Path where KG resdies within the KVM2 Server: data/shared/KG
+Path where KG resides within the KVM2 Server: data/shared/KG
 - Contains all set up done by Miguel
 - README.md gives all documentation on how to run the KG and LLM testing done so far
 - distribution/ and csv/ are both set ups for building the BiomarkerKB KG
