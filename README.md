@@ -1,8 +1,8 @@
 # Knowledge-Graph
 
-###Background
+### Background
 
-###KG Setup by Miguel:
+### KG Setup
 Path where KG resdies within the KVM2 Server: data/shared/KG
 - Contains all set up done by Miguel
 - README.md gives all documentation on how to run the KG and LLM testing done so far
@@ -10,7 +10,7 @@ Path where KG resdies within the KVM2 Server: data/shared/KG
 - https://github.com/clinical-biomarkers/biomarker-partnership/tree/main/supplementary_files 
 
 
-###BiomarkerKB KG Build process
+### BiomarkerKB KG Build process
 - The BiomarkerKB KG is built by ingesting biomarker data in the CFDE KG managed by the Data Distillery team
 - https://ubkg.docs.xconsortia.org/basics/ 
 Met with the team multiple times to get the process down
