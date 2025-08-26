@@ -1,23 +1,53 @@
-# Knowledge-Graph
+Repository Structure & Setup
 
-### Background
+Server Path: /data/shared/KG
 
-### KG Setup
-Path where KG resides within the KVM2 Server: data/shared/KG
-- Contains all set up done by Miguel
-- README.md gives all documentation on how to run the KG and LLM testing done so far
-- distribution/ and csv/ are both set ups for building the BiomarkerKB KG
-- https://github.com/clinical-biomarkers/biomarker-partnership/tree/main/supplementary_files 
+This directory contains the BiomarkerKB Knowledge Graph (KG) setup and all supporting documentation.
+
+README.md – Documentation on running the KG and LLM testing performed so far.
+
+distribution/ and csv/ – Build configurations and files for constructing the BiomarkerKB KG.
+
+Supplementary Files
+ – Additional resources supporting the build process.
+
+KG Build Process
+
+The BiomarkerKB KG is constructed by ingesting biomarker data into the CFDE Knowledge Graph (KG) managed by the Data Distillery team
+.
+
+Workflow
+
+Biomarker Data Conversion
+
+Biomarker data is first converted into the OWLNETS_edgelist.txt and OWLNETS_node_metadata.txt formats required by the CFDE KG.
+
+Conversion handled using the nt-owlnets-kg-converter
+.
+
+Generated files are available in:
+
+/data/shared/repos/ubkg-etl
 
 
-### BiomarkerKB KG Build process
-- The BiomarkerKB KG is built by ingesting biomarker data in the CFDE KG managed by the Data Distillery team
-- https://ubkg.docs.xconsortia.org/basics/ 
-Met with the team multiple times to get the process down
-- First step was handled by Sean - Converted the Biomarker data in NTriples format to the OWLNETS_edgelist.txt and OWLNETS_node_metadata.txt files required by the data distillery knowledge graph.
-https://github.com/clinical-biomarkers/nt-owlnets-kg-converter 
-- Generated files exist here along with the entire repo copied from ubkg: /data/shared/repos/ubkg-etl
-- Whenever we push new data the idea is to recreate the biomarker edge list and nodes and reingest the biomarker data into the CFDE KG
-- https://github.com/x-atlas-consortia/ubkg-neo4j/blob/main/docs/BUILD_INSTRUCTIONS.md
-- Important fact to note for the build: “Free disk space equal to 3-4 times the size of the set of ontology CSVs”
-- Copied the repo here to get the relevant files and scripts: /data/shared/repos/ubkg-neo4j
+Integration into CFDE KG
+
+Once generated, these files are re-ingested into the CFDE KG.
+
+Full build and integration instructions are provided by the UBKG team:
+UBKG Build Instructions
+.
+
+Data Updates
+
+Each time new biomarker data is pushed, the edge list and node files must be recreated and re-ingested into the CFDE KG.
+
+Notes & Requirements
+
+Building the KG requires significant disk space:
+
+Free disk space equal to 3–4× the size of the ontology CSVs is recommended.
+
+Repository copies and scripts are stored here:
+
+/data/shared/repos/ubkg-neo4j
