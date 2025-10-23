@@ -64,28 +64,28 @@ The BiomarkerKB KG is constructed by ingesting biomarker data into the CFDE Know
 
 ## BiomarkerKG Use Cases
 
-1. Identify multi-disease biomarkers
+1. **Identify multi-disease biomarkers**
    - Retrieve biomarkers that are associated with multiple diseases, enabling the identification of shared biological indicators across disease domains.
-2. Identify multi-biomarker diseases
+2. **Identify multi-biomarker diseases**
    - Find diseases linked to multiple biomarkers to reveal complex molecular signatures and potential diagnostic panels.
-3. Detect biomarkers with multiple measurement contexts
+3. **Detect biomarkers with multiple measurement contexts**
    - Query biomarkers that have distinct LOINC and UBERON identifiers.
    - This highlights biomarkers measurable in different specimen types or anatomical locations, suggesting disease-specific measurement modalities.
 
 ## CFDE Knowledge Graph (KG) Use Cases
 
-1. Explore drug target and therapy connections
+1. **Explore drug target and therapy connections**
    - From a single biomarker entry, expand to identify related drug targets, therapeutic agents, and associated treatment contexts.
-2. Cross-disease treatment discovery
+2. **Cross-disease treatment discovery**
    - Starting from one biomarker–disease association, identify drug therapies linked to that biomarker and expand to find other diseases treated by the same therapy, revealing shared treatment and molecular pathways.
 
 ## RENCI Knowledge Graph (KG) Use Cases
 
-1. Link metabolite biomarkers to protein sequences
+1. **Link metabolite biomarkers to protein sequences**
    - Connect metabolite biomarkers with related protein sequences to uncover molecular mechanisms and enzymatic interactions.
-2. Integrate patient and laboratory data
+2. **Integrate patient and laboratory data**
    - Retrieve associated patient-level and laboratory data for selected metabolites to support translational and clinical insights.
-3. Identify interacting genes and proteins
+3. **Identify interacting genes and proteins**
    - Discover genes and proteins interacting with a given biomarker to elucidate biological pathways, reactions, and post-translational modifications that may underlie disease processes.
 
 
