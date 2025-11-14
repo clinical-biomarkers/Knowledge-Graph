@@ -16,6 +16,14 @@ This directory contains the BiomarkerKB Knowledge Graph (KG) setup and all suppo
 
 The BiomarkerKB KG is constructed by ingesting biomarker data into the CFDE Knowledge Graph (KG) managed by the [Data Distillery team](https://ubkg.docs.xconsortia.org/basics/)
 
+## Preliminary steps
+
+Convert `json` files to `nt` on the `dev.biomarkerkb.org` server:
+```bash
+/data/shared/repos/biomarker-data-transformation/nt/json_to_nt.sh
+```
+Copy NT files from `/data/shared/biomarkerdb/generated/nt` into `/data/shared/KG/nt` on the KVM2 server.
+
 ## Workflow
 
 1. **Biomarker Data Conversion**
