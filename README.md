@@ -4,7 +4,7 @@
 
 Server Path: /data/shared/KG
 
-This directory contains the BiomarkerKB Knowledge Graph (KG) setup and all supporting documentation.
+This directory contains the BiomarkerKB Knowledge Graph (KG) setup and all supporting documentation with instructions for how to integrate Biomarker Knowledge into the CFDE UBKG. PLease make sure to follow all licenses from UBKG when integrating the biomarker knowledge graph into UBKG. The instructions for integration are below
 
 - README.md – Documentation on running the KG and LLM testing performed so far.
 
@@ -26,10 +26,11 @@ Copy NT files from `/data/shared/biomarkerdb/generated/nt` into `/data/shared/KG
 
 ## Workflow
 
-1. **Biomarker Data Conversion**
+1. **Biomarker Data Conversion into Biomarker KG**
    - Biomarker data is first converted into the `OWLNETS_edgelist.txt` and `OWLNETS_node_metadata.txt` formats required by the CFDE KG.  
    - Conversion handled using the [nt-owlnets-kg-converter](https://github.com/clinical-biomarkers/nt-owlnets-kg-converter).
    - This converts BiomarkerKB data into Ntriples. This format can then be used to generate CSVs files needed to build neo4j knowledge graphs.
+   - (available in [BiomarkerKG](https://github.com/clinical-biomarkers/Knowledge-Graph/tree/main/BiomarkerKG))
    - Generated files are available in:  
      ```
      /data/shared/repos/ubkg-etl
