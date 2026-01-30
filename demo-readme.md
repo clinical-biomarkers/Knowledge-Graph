@@ -42,7 +42,9 @@ We're currently doing queries on knowledge that we already know. In the future, 
 - `distribution` are instructions for building the kg
 - What we're interested in is `run_KG_connection`
 - `run_KG_noBiomarker` is the version of the kg without biomarker data. We use it when we have new biomarker data. It is used to re-ingest biomarker data into the full kg (minus biomarker data).
-KVM2 /data/shared/KG/run_KG_connection
+- `README.md`: documentation on how to run the KG, build the container, test driver connection, how to query. Miguel had started to test the LLM that generates Cypher queries - that part is not finished. Visit https://github.com/collaborativebioinformatics/MIDAS to see how it was implemented by the team we were part of at the AWS Hackathon.
+
+## KVM2 `/data/shared/KG/run_KG_connection`
 - `DataDistillery03Jan2025.zip` is the zip file with everything
 - we run `build_container.sh`
 - `container.cfg` is the container config file. It has all the parameters for the container script. It tells you where to pull the docker image from. It has the neo4j password for GUI. It has the ports: defaults are 7474 and 7687, they were changed to 4000 and 4500 by Miguel but then Dacian updated something and they no longer work.
@@ -85,3 +87,20 @@ In the output we see the CUI (concept ID), the preferred gene name ("APOE gene")
 The second line shows the inverse relationship: starts from the disease and connects it to the APOE gene.
 
 So we have 10 pairs of results (20 total).
+
+# GUI
+Make sure the container is running in the terminal (see above; you need to run Docker Desktop and `build_container.sh`).
+
+Go to localhost:7474/browser/ and enter username and password if prompted (see `container.cfg`).
+
+Try this query (from `test_connection/disease_query.py`):
+```
+# Paste this into the console at the top and hit the "Play" button
+MATCH (node)-[:gene_associated_with_disease]-(connectedNode)
+OPTIONAL MATCH (connectedNode)-[:PREF_TERM]-(termNode)
+RETURN node, connectedNode, termNode
+LIMIT 20
+```
+Here we see edge labels that don't show up in the command line output (it's part of the query): `gene_associated_with_disease`. Some relationships are mutual (e.g., `gene_associated_with_disease` and `disease_has_associated_gene` between `APOE gene` and `Atherosclerosis`).
+
+When you click on a node, three buttons appear: "Unlock", "Hide", and a button I'll call "Share" because it looks like that symbol that you see when you want to share a picture or article on social media. Not sure what "Unlock" does. "Hide" hides the node. "Share" shows all nodes that this node is connected to.
