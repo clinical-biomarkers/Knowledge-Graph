@@ -1,3 +1,10 @@
+# Preliminary Notes
+This demo will be run locally on macOS. Instructions are provided for macOS only. While the code may run on Windows, Windows-specific setup and execution are out of scope for this demo and will not be covered.
+## Prerequisites
+- Free disk space: 52 GB
+- Docker Desktop (download from https://www.docker.com/)
+- `kg.zip` (shared privately)
+
 # Example Cypher Queries
 Look for any node n that contains a string and return 5 of them
 ```
