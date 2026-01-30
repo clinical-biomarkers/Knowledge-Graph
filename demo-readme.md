@@ -1,9 +1,34 @@
 # Preliminary Notes
 This demo will be run locally on macOS. Instructions are provided for macOS only. While the code may run on Windows, Windows-specific setup and execution are out of scope for this demo and will not be covered.
+
 ## Prerequisites
 - Free disk space: 52 GB
 - Docker Desktop (download from https://www.docker.com/)
 - `kg.zip` (shared privately)
+
+## Setup
+1. Unzip `kg.zip`
+2. Once upzipped, you will see the `kg` directory contains the following:
+   - `DataDistillery03Jan2025` - directory with everything necessary to run the container
+   - `env` - Python virtual environment
+   - `test_connection` - prebuilt Python scripts used to run queries
+3. To start the container:
+   - Launch Docker Desktop
+   - Open terminal
+   - Navigate to `/path/to/kg/DataDistillery03Jan2025`
+   - Launch `build_container.sh`
+     ```
+     ./build_container.sh
+     ```
+4. Open a new Terminal tab to run queries (it should land in `/path/to/kg/DataDistillery03Jan2025` by default)
+5. Go one directory up (`cd ..`) and activate the virtual environment
+   ```
+   source env/bin/activate
+   ```
+6. You're ready to run queries now. For example,
+   ```
+   python test_connection/disease_query.py
+   ```
 
 # Example Cypher Queries
 Look for any node n that contains a string and return 5 of them
